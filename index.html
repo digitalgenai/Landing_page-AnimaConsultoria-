@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Financeiro - Transforme as Finanças da Sua Empresa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilo para o scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Efeito de sombra sutil para o header fixo */
+        .sticky-header {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        /* Cores customizadas para se aproximar do dourado */
+        .bg-gold-500 { background-color: #FFD700; }
+        .hover\:bg-gold-600:hover { background-color: #f0c400; }
+        .text-gold-500 { color: #FFD700; }
+        .border-gold-500 { border-color: #FFD700; }
+        .ring-gold-500:focus { --tw-ring-color: #FFD700; }
+        
+        /* Added bounce animation for all buttons */
+        .bounce-animation {
+            transition: transform 0.3s ease;
+        }
+        .bounce-animation:hover {
+            transform: translateY(-8px);
+            animation: bounce 0.6s ease-in-out;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(-8px);
+            }
+            40% {
+                transform: translateY(-12px);
+            }
+            60% {
+                transform: translateY(-6px);
+            }
+        }
+        
+        /* WhatsApp floating button animation */
+        .whatsapp-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* Improved mobile responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .text-4xl {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+            
+            .text-6xl {
+                font-size: 2.5rem;
+                line-height: 3rem;
+            }
+        }
+    </style>
+</head> 
+<body class="bg-black text-gray-300">
+
+    <!-- Updated WhatsApp button with correct phone number and improved styling -->
+    <a href="https://wa.me/5585966666464?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20an%C3%A1lise%20estrat%C3%A9gica%20Raio-X%20Financeiro." target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 whatsapp-float bounce-animation">
+        <span class="text-2xl"></span>
+    </a>
+
+    <header id="inicio" class="bg-black/80 backdrop-blur-lg sticky top-0 z-50 w-full sticky-header">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <!-- Made Ana Alves name a clickable button that returns to top -->
+            <button onclick="scrollToTop()" class="flex items-center space-x-2 cursor-pointer bounce-animation">
+                <svg class="h-8 w-8 text-gold-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                   <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V6.375c0-.621.504-1.125 1.125-1.125h.375m16.5 0h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m0 0h-1.5" />
+                </svg>
+                <span class="font-bold text-xl text-white">Ana Alves</span>
+            </button>
+            <!-- Added bounce animation to header button -->
+            <a href="#formulario" class="hidden md:inline-block bg-gold-500 text-black font-bold py-2 px-6 rounded-lg shadow-lg hover:bg-gold-600 bounce-animation">
+                QUERO MEU DIAGNÓSTICO FLASH
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-black pt-16 pb-20 md:pt-24 md:pb-28 text-center">
+            <div class="container mx-auto px-4 sm:px-6">
+                <!-- Improved mobile typography -->
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-black text-white leading-tight">
+                    Transforme Seus Números em Lucro com uma <span class="text-gold-500">Visão Estratégica</span>
+                </h1>
+                <p class="mt-4 max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-300">
+                    Comece com o <strong>Flash Financeiro</strong> para um panorama rápido e avance para o <strong>Raio-X Financeiro</strong>, uma análise estratégica e gratuita que revela o caminho para o crescimento.
+                </p>
+                <p class="mt-6 max-w-3xl mx-auto text-sm sm:text-base md:text-lg font-semibold text-gray-400">
+                    Uma metodologia criada pela economista Ana Alves para líderes que querem organizar, crescer e lucrar mais.
+                </p>
+                <!-- Added bounce animation to main CTA button -->
+                <a href="#formulario" class="mt-8 inline-block bg-gold-500 text-black font-bold py-4 px-6 sm:px-10 rounded-lg shadow-xl text-base sm:text-lg hover:bg-gold-600 bounce-animation">
+                    RECEBER MEU FLASH FINANCEIRO AGORA
+                </a>
+            </div>
+        </section>
+
+        <section id="autoridade" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="flex flex-col md:flex-row items-center gap-8 sm:gap-12">
+                    <div class="md:w-1/3 flex-shrink-0">
+                        <img src="https://placehold.co/400x400/333333/FFD700?text=Ana" alt="Foto profissional de Ana Alves" class="rounded-full mx-auto shadow-2xl w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover border-4 border-gray-800">
+                    </div>
+                    <div class="md:w-2/3 text-center md:text-left">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-white">A Economista em Estratégia Financeira</h2>
+                        <p class="mt-4 text-base sm:text-lg text-gray-300">
+                            Ana Alves é economista em transformar dados em estratégia. Ela utiliza ferramentas de automação e IA para agilizar a análise, dedicando seu tempo ao que realmente importa: criar um plano de ação claro para sua empresa multiplicar resultados.
+                        </p>
+                        <div class="mt-8 bg-gray-800 border-l-4 border-gold-500 p-4 sm:p-6 rounded-r-lg">
+                            <p class="text-lg sm:text-xl font-semibold text-gold-500 italic">
+                                "Empresas que aplicaram minhas metodologias aumentaram em até 37% seu lucro líquido em 6 meses."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios" class="py-20 bg-black">
+            <div class="container mx-auto px-4 sm:px-6 text-center">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white">O que você vai conquistar com esta jornada</h2>
+                <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
+                    <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-transparent hover:border-gray-800"><div class="text-blue-500 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12a9 9 0 1118 0 9 9 0 01-18 0zM12 15.75c.373 0 .743-.09 1.08-.255l-1.08.255zm-1.08-.255A.75.75 0 0112 15.75v.008c.373 0 .743-.09 1.08-.255l-1.08.255zm1.08.255l1.08-.255a.75.75 0 00-1.08-.255z" /><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6A2.25 2.25 0 008.25 8.25v3.75a2.25 2.25 0 002.25 2.25h3a2.25 2.25 0 002.25-2.25V8.25a2.25 2.25 0 00-2.25-2.25h-3z" /></svg></div><h3 class="text-lg sm:text-xl font-bold text-white">Clareza Imediata</h3><p class="mt-2 text-sm sm:text-base text-gray-400">Com o Flash Financeiro, tenha uma visão geral da saúde da sua empresa.</p></div>
+                    <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-transparent hover:border-gray-800"><div class="text-green-500 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><h3 class="text-lg sm:text-xl font-bold text-white">Organização Rápida</h3><p class="mt-2 text-sm sm:text-base text-gray-400">Sem precisar de planilhas complicadas para entender seus números.</p></div>
+                    <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-transparent hover:border-gray-800"><div class="text-purple-500 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-3.75-2.25M21 12l-3.75 2.25" /></svg></div><h3 class="text-lg sm:text-xl font-bold text-white">Decisões Estratégicas</h3><p class="mt-2 text-sm sm:text-base text-gray-400">Com o Raio-X, receba um plano de ação para decisões mais inteligentes.</p></div>
+                    <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-transparent hover:border-gray-800"><div class="text-gold-500 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 15l.813.904m1.292 1.292L12 18l1.208-1.208M12 21a9 9 0 100-18 9 9 0 000 18z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15.904 9.813L15 9l.904.813m-1.292 1.292L18 12l-1.208 1.208M12 3a9 9 0 100 18 9 9 0 000 18z" /></svg></div><h3 class="text-lg sm:text-xl font-bold text-white">Diagnóstico Eficiente</h3><p class="mt-2 text-sm sm:text-base text-gray-400">A tecnologia acelera a análise para focarmos 100% na estratégia.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="jornada" class="py-20 bg-gray-900">
+           <div class="container mx-auto px-4 sm:px-6">
+               <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center">Sua Jornada de Crescimento Acelerado</h2>
+               <p class="mt-4 text-base sm:text-lg text-gray-400 text-center max-w-3xl mx-auto">Entenda como vamos do diagnóstico imediato a um plano de ação completo para sua empresa.</p>
+               <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
+                   <!-- Added bounce animation to journey cards -->
+                   <a href="#formulario" class="bg-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 flex flex-col items-center text-center hover:bg-gray-700 transition-colors bounce-animation">
+                       <div class="w-20 h-20 sm:w-24 sm:h-24 mb-6">
+                           <img src="Gemini_Generated_Image_rgci0drgci0drgci.png" alt="Ícone Flash Financeiro" class="rounded-full w-full h-full object-cover border-2 border-gold-500">
+                       </div>
+                       <h3 class="text-xl sm:text-2xl font-bold text-gold-500">1. Flash Financeiro</h3>
+                       <p class="text-base sm:text-lg font-semibold text-white mt-1">O Ponto de Partida Inteligente</p>
+                       <ul class="mt-6 space-y-4 text-sm sm:text-base text-gray-300 flex-grow text-left">
+                           <li class="flex items-start"><span class="text-gold-500 mr-3 mt-1">✓</span><span><strong>Diagnóstico rápido e automatizado</strong> para entender sua situação atual.</span></li>
+                           <li class="flex items-start"><span class="text-gold-500 mr-3 mt-1">✓</span><span>Visão instantânea dos seus <strong>principais indicadores financeiros</strong>.</span></li>
+                           <li class="flex items-start"><span class="text-gold-500 mr-3 mt-1">✓</span><span>Receba por e-mail <strong>em poucos minutos</strong> após o cadastro.</span></li>
+                       </ul>
+                       <div class="mt-8 bg-gray-900 p-4 rounded-lg text-center font-semibold text-white w-full">Primeiro passo: 100% Gratuito e Imediato</div>
+                   </a>
+                   <!-- Updated WhatsApp link with correct phone number -->
+                   <a href="https://wa.me/5585966666464?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20an%C3%A1lise%20estrat%C3%A9gica%20Raio-X%20Financeiro." target="_blank" class="bg-gray-800 p-6 sm:p-8 rounded-2xl border-2 border-gold-500 flex flex-col items-center text-center shadow-2xl shadow-gold-500/10 hover:bg-gray-700 transition-colors bounce-animation">
+                        <div class="w-20 h-20 sm:w-24 sm:h-24 mb-6">
+                           <img src="https://placehold.co/150x150/1F2937/FFD700?text=Raio-X" alt="Ícone Raio-X Financeiro" class="rounded-full w-full h-full object-cover border-2 border-gold-500">
+                       </div>
+                       <h3 class="text-xl sm:text-2xl font-bold text-gold-500">2. Raio-X Financeiro</h3>
+                       <p class="text-base sm:text-lg font-semibold text-white mt-1">A Análise Estratégica para o Lucro</p>
+                       <ul class="mt-6 space-y-4 text-sm sm:text-base text-gray-300 flex-grow text-left">
+                           <li class="flex items-start"><span class="text-gold-500 mr-3 mt-1">✓</span><span><strong>Análise estratégica e gratuita</strong> feita diretamente pela Ana.</span></li>
+                           <li class="flex items-start"><span class="text-gold-500 mr-3 mt-1">✓</span><span>Visão profunda para descobrir <strong>oportunidades de crescimento e lucro</strong>.</span></li>
+                           <li class="flex items-start"><span class="text-gold-500 mr-3 mt-1">✓</span><span>Receba um <strong>plano de ação claro</strong> para aumentar a eficiência da sua empresa.</span></li>
+                       </ul>
+                       <div class="mt-8 bg-gold-500 p-4 rounded-lg text-center font-bold text-black w-full">Próximo passo: Análise aprofundada</div>
+                   </a>
+               </div>
+           </div>
+       </section>
+
+        <section id="como-funciona" class="py-20 bg-black">
+            <div class="container mx-auto px-4 sm:px-6">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center">Seu caminho para o sucesso em 4 passos</h2>
+                <div class="mt-12 relative">
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-700" style="transform: translateY(-50%);"></div>
+                    <div class="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
+                        <div class="bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg z-10"><div class="flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16 mx-auto rounded-full bg-gold-500 text-black font-bold text-xl sm:text-2xl border-4 border-black">1</div><h3 class="mt-4 font-bold text-base sm:text-lg text-white">Preencha o formulário</h3><p class="mt-1 text-sm sm:text-base text-gray-400">Garanta seu acesso gratuito.</p></div>
+                        <div class="bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg z-10"><div class="flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16 mx-auto rounded-full bg-gold-500 text-black font-bold text-xl sm:text-2xl border-4 border-black">2</div><h3 class="mt-4 font-bold text-base sm:text-lg text-white">Receba seu Flash</h3><p class="mt-1 text-sm sm:text-base text-gray-400">Tenha o diagnóstico inicial em minutos.</p></div>
+                        <div class="bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg z-10"><div class="flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16 mx-auto rounded-full bg-gold-500 text-black font-bold text-xl sm:text-2xl border-4 border-black">3</div><h3 class="mt-4 font-bold text-base sm:text-lg text-white">Analise os resultados</h3><p class="mt-1 text-sm sm:text-base text-gray-400">Veja os pontos de melhoria da sua empresa.</p></div>
+                        <div class="bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg z-10"><div class="flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16 mx-auto rounded-full bg-gold-500 text-black font-bold text-xl sm:text-2xl border-4 border-black">4</div><h3 class="mt-4 font-bold text-base sm:text-lg text-white">Solicite seu Raio-X</h3><p class="mt-1 text-sm sm:text-base text-gray-400">Entre em contato para a análise estratégica.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="formulario" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-xl mx-auto bg-black border-2 border-gold-500 rounded-2xl shadow-2xl shadow-gold-500/20 p-6 sm:p-8 md:p-12">
+                    <h2 class="text-2xl sm:text-3xl font-black text-center text-white">Comece agora com seu <span class="text-gold-500">Flash Financeiro</span> Gratuito</h2>
+                    <!-- Added form masks and validation -->
+                    <form class="mt-8 space-y-6" onsubmit="return validateForm()">
+                        <div>
+                            <label for="nome" class="block text-sm font-medium text-gray-300">Nome Completo *</label>
+                            <input type="text" name="nome" id="nome" required minlength="2" class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-gray-700" placeholder="Digite seu nome completo">
+                        </div>
+                        <div>
+                            <label for="whatsapp" class="block text-sm font-medium text-gray-300">WhatsApp *</label>
+                            <input type="tel" name="whatsapp" id="whatsapp" required class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-gray-700" placeholder="(85) 99999-9999" maxlength="15">
+                        </div>
+                        <div>
+                            <label for="empresa" class="block text-sm font-medium text-gray-300">Nome da Empresa *</label>
+                            <input type="text" name="empresa" id="empresa" required minlength="2" class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-gray-700" placeholder="Digite o nome da sua empresa">
+                        </div>
+                        <div>
+                            <label for="cargo" class="block text-sm font-medium text-gray-300">Cargo *</label>
+                            <input type="text" name="cargo" id="cargo" required minlength="2" class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-gray-700" placeholder="Ex: CEO, Diretor, Gerente">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300">E-mail Corporativo *</label>
+                            <input type="email" name="email" id="email" required class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-gray-700" placeholder="seu.email@empresa.com">
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-4 px-4 border border-transparent rounded-md shadow-lg text-base sm:text-lg font-bold text-black bg-gold-500 hover:bg-gold-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-gold-500 bounce-animation">QUERO MEU DIAGNÓSTICO FLASH</button>
+                        </div>
+                    </form>
+                    <p class="mt-6 text-center text-xs sm:text-sm font-semibold text-red-300 bg-red-900/50 p-3 rounded-md">🎯 Oferta gratuita válida apenas para os 100 primeiros líderes que solicitarem neste mês.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="py-20 bg-black">
+            <div class="container mx-auto px-4 sm:px-6">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center">Líderes que já transformaram suas empresas</h2>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg"><p class="text-sm sm:text-base text-gray-300 italic">"O Flash Financeiro foi um divisor de águas. Em minutos, tive uma clareza que não consegui em anos. Depois, o Raio-X com a Ana foi simplesmente transformador. Essencial!"</p><div class="mt-6 flex items-center"><img src="https://placehold.co/100x100/333333/FFFFFF?text=J" alt="Foto do cliente" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full"><div class="ml-4"><p class="font-bold text-white text-sm sm:text-base">João Silva</p><p class="text-xs sm:text-sm text-gray-500">CEO, InovaTech</p></div></div></div>
+                    <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg"><p class="text-sm sm:text-base text-gray-300 italic">"A visão estratégica da Ana é poderosa. Os indicadores do Raio-X me ajudaram a tomar decisões que aumentaram nosso lucro de verdade."</p><div class="mt-6 flex items-center"><img src="https://placehold.co/100x100/333333/FFFFFF?text=M" alt="Foto do cliente" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full"><div class="ml-4"><p class="font-bold text-white text-sm sm:text-base">Maria Oliveira</p><p class="text-xs sm:text-sm text-gray-500">Diretora, Soluções Criativas</p></div></div></div>
+                    <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg"><p class="text-sm sm:text-base text-gray-300 italic">"Finalmente uma forma de organizar as finanças sem complicação. O diagnóstico Flash foi preciso e o Raio-X me deu o plano de ação que eu precisava."</p><div class="mt-6 flex items-center"><img src="https://placehold.co/100x100/333333/FFFFFF?text=C" alt="Foto do cliente" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full"><div class="ml-4"><p class="font-bold text-white text-sm sm:text-base">Carlos Pereira</p><p class="text-xs sm:text-sm text-gray-500">Fundador, Mercado Justo</p></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="chamada-final" class="py-20 bg-gray-900 text-white text-center">
+            <div class="container mx-auto px-4 sm:px-6">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black">Agora é com você.</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-base sm:text-lg text-gray-300">Comece com seu diagnóstico Flash e abra a porta para uma análise estratégica completa com o Raio-X Financeiro. Sua empresa merece este nível de clareza.</p>
+                <!-- Added bounce animation to final CTA button -->
+                <a href="#formulario" class="mt-8 inline-block bg-gold-500 text-black font-bold py-4 px-6 sm:px-10 rounded-lg shadow-xl text-base sm:text-lg hover:bg-gold-600 bounce-animation">
+                    QUERO COMEÇAR MINHA JORNADA AGORA
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-gray-400">
+        <div class="container mx-auto px-4 sm:px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-6 md:mb-0"><svg class="h-6 w-6 text-gold-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V6.375c0-.621.504-1.125 1.125-1.125h.375m16.5 0h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m0 0h-1.5" /></svg><span class="font-semibold text-white">Ana Alves</span></div>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="https://www.instagram.com/anima.consult/" target="_blank" class="hover:text-gold-500 transition-colors bounce-animation">Instagram</a>
+                    <a href="https://www.linkedin.com/in/anaalvesnegocios" target="_blank" class="hover:text-gold-500 transition-colors bounce-animation">LinkedIn</a>
+                </div>
+                <div class="text-sm"><a href="#" class="hover:text-gold-500 transition-colors">Política de Privacidade</a> | <a href="#" class="hover:text-gold-500 transition-colors">Termos de Uso</a></div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
+                <p>&copy; 2024 Ana Alves. Todos os direitos reservados.</p>
+                <p class="mt-2">Aviso: "O Flash Financeiro e o Raio-X Financeiro são ferramentas para fins de diagnóstico empresarial. Os resultados podem variar."</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Added JavaScript for form masks and navigation -->
+    <script>
+        // Function to scroll to top smoothly
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Phone mask for WhatsApp field
+        document.getElementById('whatsapp').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 11) {
+                value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+            } else if (value.length >= 7) {
+                value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+            } else if (value.length >= 3) {
+                value = value.replace(/(\d{2})(\d{0,5})/, '($1) $2');
+            }
+            e.target.value = value;
+        });
+
+        // Email validation
+        document.getElementById('email').addEventListener('blur', function(e) {
+            const email = e.target.value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email && !emailRegex.test(email)) {
+                e.target.style.borderColor = '#ef4444';
+                e.target.style.backgroundColor = '#7f1d1d';
+            } else {
+                e.target.style.borderColor = '#FFD700';
+                e.target.style.backgroundColor = '#374151';
+            }
+        });
+
+        // Form validation
+        function validateForm() {
+            const nome = document.getElementById('nome').value.trim();
+            const whatsapp = document.getElementById('whatsapp').value.trim();
+            const empresa = document.getElementById('empresa').value.trim();
+            const cargo = document.getElementById('cargo').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            if (!nome || nome.length < 2) {
+                alert('Por favor, digite seu nome completo.');
+                document.getElementById('nome').focus();
+                return false;
+            }
+
+            if (!whatsapp || whatsapp.length < 14) {
+                alert('Por favor, digite um número de WhatsApp válido.');
+                document.getElementById('whatsapp').focus();
+                return false;
+            }
+
+            if (!empresa || empresa.length < 2) {
+                alert('Por favor, digite o nome da sua empresa.');
+                document.getElementById('empresa').focus();
+                return false;
+            }
+
+            if (!cargo || cargo.length < 2) {
+                alert('Por favor, digite seu cargo.');
+                document.getElementById('cargo').focus();
+                return false;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailRegex.test(email)) {
+                alert('Por favor, digite um e-mail válido.');
+                document.getElementById('email').focus();
+                return false;
+            }
+
+            return true;
+        }
+
+        // Add required field indicators
+        document.addEventListener('DOMContentLoaded', function() {
+            const requiredFields = document.querySelectorAll('input[required]');
+            requiredFields.forEach(field => {
+                field.addEventListener('blur', function() {
+                    if (!this.value.trim()) {
+                        this.style.borderColor = '#ef4444';
+                    } else {
+                        this.style.borderColor = '#FFD700';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
