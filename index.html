@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- EmailJS para envio de emails -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Arquivo de configuração -->
+    <script src="config.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -28,7 +32,7 @@
         .ring-gold-500:focus { --tw-ring-color: #FFD700; }
         
         /* Added bounce animation for all buttons */
-        .bounce-animation {
+        /* .bounce-animation {
             transition: transform 0.3s ease;
         }
         .bounce-animation:hover {
@@ -46,7 +50,7 @@
             60% {
                 transform: translateY(-6px);
             }
-        }
+        } */
         
         /* WhatsApp floating button animation */
         .whatsapp-float {
@@ -80,8 +84,8 @@
 <body class="bg-black text-gray-300">
 
     <!-- Updated WhatsApp button with correct phone number and improved styling -->
-    <a href="https://wa.me/5585966666464?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20an%C3%A1lise%20estrat%C3%A9gica%20Raio-X%20Financeiro." target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 whatsapp-float bounce-animation">
-        <span class="text-2xl"></span>
+    <a href="https://wa.me/5585966666464?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20an%C3%A1lise%20estrat%C3%A9gica%20Raio-X%20Financeiro." target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 whatsapp-float bounce-animation">
+    <img src="whatsapp_icon.png" alt="Imagem do WhatsApp" class="object-cover h-12 w-12" id="whatsapp-float-btn">
     </a>
 
     <header id="inicio" class="bg-black/80 backdrop-blur-lg sticky top-0 z-50 w-full sticky-header">
@@ -184,7 +188,7 @@
                            <li class="flex items-start"><span class="text-gold-500 mr-3 mt-1">✓</span><span>Visão profunda para descobrir <strong>oportunidades de crescimento e lucro</strong>.</span></li>
                            <li class="flex items-start"><span class="text-gold-500 mr-3 mt-1">✓</span><span>Receba um <strong>plano de ação claro</strong> para aumentar a eficiência da sua empresa.</span></li>
                        </ul>
-                       <div class="mt-8 bg-gold-500 p-4 rounded-lg text-center font-bold text-black w-full">Próximo passo: Análise aprofundada</div>
+                       <div class="mt-8 bg-gold-500 p-4 rounded-lg text-center font-bold text-black w-full" id="whatsapp-card-btn" style="cursor:pointer;">Próximo passo: Análise aprofundada</div>
                    </a>
                </div>
            </div>
@@ -210,7 +214,7 @@
                 <div class="max-w-xl mx-auto bg-black border-2 border-gold-500 rounded-2xl shadow-2xl shadow-gold-500/20 p-6 sm:p-8 md:p-12">
                     <h2 class="text-2xl sm:text-3xl font-black text-center text-white">Comece agora com seu <span class="text-gold-500">Flash Financeiro</span> Gratuito</h2>
                     <!-- Added form masks and validation -->
-                    <form class="mt-8 space-y-6" onsubmit="return validateForm()">
+                    <form id="flashForm" class="mt-8 space-y-6" onsubmit="return submitForm(event)">
                         <div>
                             <label for="nome" class="block text-sm font-medium text-gray-300">Nome Completo *</label>
                             <input type="text" name="nome" id="nome" required minlength="2" class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-gray-700" placeholder="Digite seu nome completo">
@@ -232,7 +236,16 @@
                             <input type="email" name="email" id="email" required class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-gray-700" placeholder="seu.email@empresa.com">
                         </div>
                         <div>
-                            <button type="submit" class="w-full flex justify-center py-4 px-4 border border-transparent rounded-md shadow-lg text-base sm:text-lg font-bold text-black bg-gold-500 hover:bg-gold-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-gold-500 bounce-animation">QUERO MEU DIAGNÓSTICO FLASH</button>
+                            <button type="submit" id="submitBtn" class="w-full flex justify-center py-4 px-4 border border-transparent rounded-md shadow-lg text-base sm:text-lg font-bold text-black bg-gold-500 hover:bg-gold-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-gold-500 bounce-animation">
+                                <span id="btnText">QUERO MEU DIAGNÓSTICO FLASH</span>
+                                <span id="btnLoader" class="hidden">
+                                    <svg class="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
+                                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                    </svg>
+                                    Enviando...
+                                </span>
+                            </button>
                         </div>
                     </form>
                     <p class="mt-6 text-center text-xs sm:text-sm font-semibold text-red-300 bg-red-900/50 p-3 rounded-md">🎯 Oferta gratuita válida apenas para os 100 primeiros líderes que solicitarem neste mês.</p>
@@ -264,6 +277,19 @@
     </main>
 
     <footer class="bg-black text-gray-400">
+    <!-- Modal customizado WhatsApp -->
+    <div id="whatsapp-modal" class="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-sm hidden">
+        <div class="bg-gray-900 border-4 border-gold-500 rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-fade-in">
+            <button id="close-modal-btn" class="absolute top-3 right-3 text-gray-400 hover:text-gold-500 text-2xl font-bold">&times;</button>
+            <div class="flex flex-col items-center text-center">
+                <img src="whatsapp_icon.png" alt="WhatsApp" class="w-16 h-16 mb-4">
+                <h3 class="text-xl font-bold text-gold-500 mb-2">Contato via WhatsApp</h3>
+                <p class="text-gray-200 mb-4">Você será direcionado para o WhatsApp da Ana Alves.<br>Deseja continuar?</p>
+                <a href="https://wa.me/5585966666464?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20an%C3%A1lise%20estrat%C3%A9gica%20Raio-X%20Financeiro." target="_blank" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-colors text-lg mb-2">Ir para o WhatsApp</a>
+                <button id="cancel-modal-btn" class="w-full mt-2 bg-gray-700 hover:bg-gray-800 text-gray-200 font-semibold py-2 px-6 rounded-lg transition-colors">Cancelar</button>
+            </div>
+        </div>
+    </div>
         <div class="container mx-auto px-4 sm:px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="flex items-center space-x-2 mb-6 md:mb-0"><svg class="h-6 w-6 text-gold-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V6.375c0-.621.504-1.125 1.125-1.125h.375m16.5 0h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m0 0h-1.5" /></svg><span class="font-semibold text-white">Ana Alves</span></div>
@@ -281,6 +307,290 @@
     </footer>
 
     <!-- Added JavaScript for form masks and navigation -->
+    <script>
+        // Função para enviar e-mail usando EmailJS
+        async function sendEmailJS(formData) {
+            try {
+                const templateParams = {
+                    to_email: getDestinationEmail(),
+                    from_name: formData.nome,
+                    from_email: formData.email,
+                    whatsapp: formData.whatsapp,
+                    empresa: formData.empresa,
+                    cargo: formData.cargo,
+                    message: `
+Novo lead Flash Financeiro:
+
+Nome: ${formData.nome}
+WhatsApp: ${formData.whatsapp}
+Empresa: ${formData.empresa}
+Cargo: ${formData.cargo}
+E-mail: ${formData.email}
+
+Data/Hora: ${new Date().toLocaleString('pt-BR')}
+                    `
+                };
+
+                await emailjs.send(
+                    FORM_CONFIG.EMAILJS.SERVICE_ID,
+                    FORM_CONFIG.EMAILJS.TEMPLATE_ID,
+                    templateParams,
+                    FORM_CONFIG.EMAILJS.PUBLIC_KEY
+                );
+                return true;
+            } catch (error) {
+                console.error('Erro ao enviar com EmailJS:', error);
+                return false;
+            }
+        }
+
+        // Função alternativa usando Formspree
+        async function sendFormspree(formData) {
+            try {
+                const response = await fetch(`https://formspree.io/f/${FORM_CONFIG.FORMSPREE.FORM_ID}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: formData.email,
+                        nome: formData.nome,
+                        whatsapp: formData.whatsapp,
+                        empresa: formData.empresa,
+                        cargo: formData.cargo,
+                        _replyto: formData.email,
+                        _subject: 'Novo Lead Flash Financeiro',
+                        message: `
+Novo lead Flash Financeiro:
+
+Nome: ${formData.nome}
+WhatsApp: ${formData.whatsapp}
+Empresa: ${formData.empresa}
+Cargo: ${formData.cargo}
+E-mail: ${formData.email}
+
+Data/Hora: ${new Date().toLocaleString('pt-BR')}
+                        `
+                    })
+                });
+                return response.ok;
+            } catch (error) {
+                console.error('Erro ao enviar com Formspree:', error);
+                return false;
+            }
+        }
+
+        // Função para enviar dados via Web3Forms
+        async function sendWeb3Forms(formData) {
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        access_key: FORM_CONFIG.WEB3FORMS.ACCESS_KEY,
+                        subject: 'Novo Lead Flash Financeiro',
+                        from_name: formData.nome,
+                        email: formData.email,
+                        to_email: getDestinationEmail(),
+                        message: `
+Novo lead Flash Financeiro:
+
+Nome: ${formData.nome}
+WhatsApp: ${formData.whatsapp}
+Empresa: ${formData.empresa}
+Cargo: ${formData.cargo}
+E-mail: ${formData.email}
+
+Data/Hora: ${new Date().toLocaleString('pt-BR')}
+                        `
+                    })
+                });
+                
+                const result = await response.json();
+                return result.success;
+            } catch (error) {
+                console.error('Erro ao enviar com Web3Forms:', error);
+                return false;
+            }
+        }
+
+        // Função para envio local usando mailto (fallback)
+        function sendLocalEmail(formData) {
+            const subject = encodeURIComponent('Novo Lead Flash Financeiro');
+            const body = encodeURIComponent(`
+Novo lead Flash Financeiro:
+
+Nome: ${formData.nome}
+WhatsApp: ${formData.whatsapp}
+Empresa: ${formData.empresa}
+Cargo: ${formData.cargo}
+E-mail: ${formData.email}
+
+Data/Hora: ${new Date().toLocaleString('pt-BR')}
+            `);
+            
+            const mailtoLink = `mailto:${getDestinationEmail()}?subject=${subject}&body=${body}`;
+            window.open(mailtoLink);
+            return true;
+        }
+
+        // Função principal de envio do formulário
+        async function submitForm(event) {
+            event.preventDefault();
+            
+            // Validar formulário primeiro
+            if (!validateForm()) {
+                return false;
+            }
+
+            // Coletar dados do formulário
+            const formData = {
+                nome: document.getElementById('nome').value.trim(),
+                whatsapp: document.getElementById('whatsapp').value.trim(),
+                empresa: document.getElementById('empresa').value.trim(),
+                cargo: document.getElementById('cargo').value.trim(),
+                email: document.getElementById('email').value.trim()
+            };
+
+            // Mostrar loading
+            showLoading(true);
+
+            let emailSent = false;
+
+            // Tentar enviar por diferentes métodos
+            try {
+                // Método 1: Web3Forms (recomendado - gratuito e confiável)
+                if (FORM_CONFIG.WEB3FORMS.ACCESS_KEY && FORM_CONFIG.WEB3FORMS.ACCESS_KEY !== 'YOUR_ACCESS_KEY') {
+                    emailSent = await sendWeb3Forms(formData);
+                }
+                
+                // Se Web3Forms falhar, tentar EmailJS
+                if (!emailSent && FORM_CONFIG.EMAILJS.SERVICE_ID && FORM_CONFIG.EMAILJS.SERVICE_ID !== 'service_id') {
+                    emailSent = await sendEmailJS(formData);
+                }
+                
+                // Se EmailJS falhar, tentar Formspree
+                if (!emailSent && FORM_CONFIG.FORMSPREE.FORM_ID && FORM_CONFIG.FORMSPREE.FORM_ID !== 'YOUR_FORM_ID') {
+                    emailSent = await sendFormspree(formData);
+                }
+
+                // Se todos falharem, usar mailto como último recurso
+                if (!emailSent) {
+                    emailSent = sendLocalEmail(formData);
+                }
+
+            } catch (error) {
+                console.error('Erro geral no envio:', error);
+                // Fallback para mailto
+                emailSent = sendLocalEmail(formData);
+            }
+
+            showLoading(false);
+
+            if (emailSent) {
+                showSuccessMessage();
+                document.getElementById('flashForm').reset();
+            } else {
+                showErrorMessage();
+            }
+
+            return false;
+        }
+
+        // Função para mostrar/ocultar loading
+        function showLoading(show) {
+            const btnText = document.getElementById('btnText');
+            const btnLoader = document.getElementById('btnLoader');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            if (show) {
+                btnText.classList.add('hidden');
+                btnLoader.classList.remove('hidden');
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            } else {
+                btnText.classList.remove('hidden');
+                btnLoader.classList.add('hidden');
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+            }
+        }
+
+        // Função para mostrar mensagem de sucesso
+        function showSuccessMessage() {
+            const successHtml = `
+                <div class="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-sm">
+                    <div class="bg-gray-900 border-4 border-green-500 rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-fade-in">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-green-500 mb-2">Sucesso!</h3>
+                            <p class="text-gray-200 mb-4">Seus dados foram enviados com sucesso! Você receberá seu Flash Financeiro em breve no e-mail informado.</p>
+                            <button onclick="this.parentElement.parentElement.parentElement.remove()" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-colors text-lg">OK</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', successHtml);
+        }
+
+        // Função para mostrar mensagem de erro
+        function showErrorMessage() {
+            const errorHtml = `
+                <div class="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-sm">
+                    <div class="bg-gray-900 border-4 border-red-500 rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-fade-in">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mb-4">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-red-500 mb-2">Erro no Envio</h3>
+                            <p class="text-gray-200 mb-4">Houve um problema ao enviar seus dados. Por favor, tente novamente ou entre em contato via WhatsApp.</p>
+                            <button onclick="this.parentElement.parentElement.parentElement.remove()" class="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-colors text-lg mb-2">Tentar Novamente</button>
+                            <a href="https://wa.me/5585966666464?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20an%C3%A1lise%20estrat%C3%A9gica%20Flash%20Financeiro." target="_blank" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition-colors">Contato via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', errorHtml);
+        }
+
+        // Modal WhatsApp
+        function openWhatsappModal() {
+            document.getElementById('whatsapp-modal').classList.remove('hidden');
+        }
+        function closeWhatsappModal() {
+            document.getElementById('whatsapp-modal').classList.add('hidden');
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Botão flutuante
+            const floatBtn = document.getElementById('whatsapp-float-btn');
+            if(floatBtn) {
+                floatBtn.parentElement.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openWhatsappModal();
+                });
+            }
+            // Card "Próximo passo"
+            const cardBtn = document.getElementById('whatsapp-card-btn');
+            if(cardBtn) {
+                cardBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openWhatsappModal();
+                });
+            }
+            // Fechar modal
+            document.getElementById('close-modal-btn').onclick = closeWhatsappModal;
+            document.getElementById('cancel-modal-btn').onclick = closeWhatsappModal;
+        });
+    </script>
     <script>
         // Function to scroll to top smoothly
         function scrollToTop() {
