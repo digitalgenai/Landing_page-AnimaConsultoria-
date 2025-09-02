@@ -3,12 +3,13 @@
 
 const FORM_CONFIG = {
     // E-mail que receberá as mensagens do formulário
-    EMAIL_DESTINO: 'rwendell.regis@gmail.com',
+    EMAIL_DESTINO: 'wendell.pereira@digitalcollege.com.br',
     
     // Configurações do EmailJS (opcional - requer configuração no site emailjs.com)
     EMAILJS: {
         SERVICE_ID: 'service_id',     // Substituir pela Service ID do EmailJS
-        TEMPLATE_ID: 'template_id',   // Substituir pela Template ID do EmailJS
+        TEMPLATE_ID: 'template_id',   // Substituir pela Template ID do EmailJS para leads
+        ASSISTANT_TEMPLATE_ID: 'assistant_template_id', // Template específico para envio do link do assistente
         PUBLIC_KEY: 'your_public_key' // Substituir pela Public Key do EmailJS
     },
     
@@ -19,7 +20,8 @@ const FORM_CONFIG = {
     
     // Configurações do Formspree (alternativa)
     FORMSPREE: {
-        FORM_ID: 'YOUR_FORM_ID'      // Obter em https://formspree.io
+        FORM_ID: 'YOUR_FORM_ID',      // Obter em https://formspree.io
+        ASSISTANT_FORM_ID: 'YOUR_ASSISTANT_FORM_ID' // Formulário específico para envio do link do assistente
     }
 };
 
