@@ -23,12 +23,17 @@
         .sticky-header {
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
-        /* Cores customizadas para se aproximar do dourado */
-        .bg-gold-500 { background-color: #FFD700; }
-        .hover\:bg-gold-600:hover { background-color: #f0c400; }
-        .text-gold-500 { color: #FFD700; }
-        .border-gold-500 { border-color: #FFD700; }
-        .ring-gold-500:focus { --tw-ring-color: #FFD700; }
+        /* Cores customizadas - Novo esquema azul e dourado */
+        .bg-gold-500 { background-color: #FDBC58; }
+        .hover\:bg-gold-600:hover { background-color: #f1c073; }
+        .text-gold-500 { color: #FDBC58; }
+        .border-gold-500 { border-color: #FDBC58; }
+        .ring-gold-500:focus { --tw-ring-color: #FDBC58; }
+        
+        /* Cores azuis para o novo esquema */
+        .bg-dark-blue { background-color: #010817; }
+        .bg-medium-blue { background-color: #0a0f19; }
+        .bg-light-blue { background-color: #1b1c1f; }
         
         /* Added bounce animation for all buttons */
         /* .bounce-animation {
@@ -80,14 +85,14 @@
         }
     </style>
 </head> 
-<body class="bg-black text-gray-300">
+<body class="bg-dark-blue text-white">
 
     <!-- Updated WhatsApp button with correct phone number and improved styling -->
     <a href="https://wa.me/5585966666464?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20an%C3%A1lise%20estrat%C3%A9gica%20Raio-X%20Financeiro." target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 whatsapp-float bounce-animation">
     <img src="whatsapp_icon.png" alt="Imagem do WhatsApp" class="object-cover h-12 w-12" id="whatsapp-float-btn">
     </a>
 
-    <header id="inicio" class="bg-black/80 backdrop-blur-lg sticky top-0 z-50 w-full sticky-header">
+    <header id="inicio" class="bg-dark-blue/80 backdrop-blur-lg sticky top-0 z-50 w-full sticky-header">
         <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
             <!-- Made Ana Alves name a clickable button that returns to top -->
             <button onclick="scrollToTop()" class="flex items-center space-x-2 cursor-pointer bounce-animation">
@@ -104,16 +109,16 @@
     </header>
 
     <main>
-        <section class="bg-black pt-16 pb-20 md:pt-24 md:pb-28 text-center">
+        <section class="bg-dark-blue pt-16 pb-20 md:pt-24 md:pb-28 text-center">
             <div class="container mx-auto px-4 sm:px-6">
                 <!-- Improved mobile typography -->
                 <h1 class="text-3xl sm:text-4xl md:text-6xl font-black text-white leading-tight">
                     Transforme Seus Números em Lucro com uma <span class="text-gold-500">Visão Estratégica</span>
                 </h1>
-                <p class="mt-4 max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-300">
+                <p class="mt-4 max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-white">
                     Comece com o <strong>Flash Financeiro</strong> para um panorama rápido e avance para o <strong>Raio-X Financeiro</strong>, uma análise estratégica e gratuita que revela o caminho para o crescimento.
                 </p>
-                <p class="mt-6 max-w-3xl mx-auto text-sm sm:text-base md:text-lg font-semibold text-gray-400">
+                <p class="mt-6 max-w-3xl mx-auto text-sm sm:text-base md:text-lg font-semibold text-gray-300">
                     Uma metodologia criada pela economista Ana Alves para líderes que querem organizar, crescer e lucrar mais.
                 </p>
                 <!-- Added bounce animation to main CTA button -->
@@ -123,66 +128,101 @@
             </div>
         </section>
 
-        <section id="autoridade" class="py-20 bg-gray-900">
+        <section id="autoridade" class="py-20 bg-medium-blue">
             <div class="container mx-auto px-4 sm:px-6">
                 <div class="flex flex-col md:flex-row items-center gap-8 sm:gap-12">
                     <div class="md:w-1/3 flex-shrink-0">
-                        <img src="profile_picture.jpg" alt="Foto profissional de Ana Alves" class="rounded-full mx-auto shadow-2xl w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover border-4 border-gray-800">
+                        <img src="profile_picture.jpg" alt="Foto profissional de Ana Alves" class="rounded-full mx-auto shadow-2xl w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover border-4 border-dark-blue">
                     </div>
                     <div class="md:w-2/3 text-center md:text-left">
-                        <h2 class="text-2xl sm:text-3xl font-bold text-white">A Economista em Estratégia Financeira</h2>
-                        <p class="mt-4 text-base sm:text-lg text-gray-300">
-                            Ana Alves é economista em transformar dados em estratégia. Ela utiliza ferramentas de automação e IA para agilizar a análise, dedicando seu tempo ao que realmente importa: criar um plano de ação claro para sua empresa multiplicar resultados.
+                        <h2 class="text-2xl sm:text-3xl font-bold text-white">A especialista em Estratégia Financeira</h2>
+                        <p class="mt-4 text-base sm:text-lg text-white">
+                            Ana Alves é economista e especialista em transformar dados em estratégia. Ela utiliza ferramentas de automação e IA para agilizar a análise, dedicando seu tempo ao que realmente importa: criar um plano de ação claro para sua empresa multiplicar resultados.
                         </p>
-                        <div class="mt-8 bg-gray-800 border-l-4 border-gold-500 p-4 sm:p-6 rounded-r-lg">
+                        <div class="mt-8 bg-dark-blue border-l-4 border-gold-500 p-4 sm:p-6 rounded-r-lg">
                             <p class="text-lg sm:text-xl font-semibold text-gold-500 italic">
                                 "Empresas que aplicaram minhas metodologias aumentaram em até 37% seu lucro líquido em 6 meses."
                             </p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section id="beneficios" class="py-20 bg-black">
-            <div class="container mx-auto px-4 sm:px-6 text-center">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white">O que você vai conquistar com esta jornada</h2>
-                <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
-                    <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-transparent hover:border-gray-800"><div class="text-blue-500 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12a9 9 0 1118 0 9 9 0 01-18 0zM12 15.75c.373 0 .743-.09 1.08-.255l-1.08.255zm-1.08-.255A.75.75 0 0112 15.75v.008c.373 0 .743-.09 1.08-.255l-1.08.255zm1.08.255l1.08-.255a.75.75 0 00-1.08-.255z" /><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6A2.25 2.25 0 008.25 8.25v3.75a2.25 2.25 0 002.25 2.25h3a2.25 2.25 0 002.25-2.25V8.25a2.25 2.25 0 00-2.25-2.25h-3z" /></svg></div><h3 class="text-lg sm:text-xl font-bold text-white">Clareza Imediata</h3><p class="mt-2 text-sm sm:text-base text-gray-400">Com o Flash Financeiro, tenha uma visão geral da saúde da sua empresa.</p></div>
-                    <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-transparent hover:border-gray-800"><div class="text-green-500 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><h3 class="text-lg sm:text-xl font-bold text-white">Organização Rápida</h3><p class="mt-2 text-sm sm:text-base text-gray-400">Sem precisar de planilhas complicadas para entender seus números.</p></div>
-                    <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-transparent hover:border-gray-800"><div class="text-purple-500 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-3.75-2.25M21 12l-3.75 2.25" /></svg></div><h3 class="text-lg sm:text-xl font-bold text-white">Decisões Estratégicas</h3><p class="mt-2 text-sm sm:text-base text-gray-400">Com o Raio-X, receba um plano de ação para decisões mais inteligentes.</p></div>
-                    <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg border border-transparent hover:border-gray-800"><div class="text-gold-500 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 15l.813.904m1.292 1.292L12 18l1.208-1.208M12 21a9 9 0 100-18 9 9 0 000 18z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15.904 9.813L15 9l.904.813m-1.292 1.292L18 12l-1.208 1.208M12 3a9 9 0 100 18 9 9 0 000 18z" /></svg></div><h3 class="text-lg sm:text-xl font-bold text-white">Diagnóstico Eficiente</h3><p class="mt-2 text-sm sm:text-base text-gray-400">A tecnologia acelera a análise para focarmos 100% na estratégia.</p></div>
+                
+                <!-- Blocos de Currículo da Ana Alves -->
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Bloco Formação -->
+                    <div class="bg-dark-blue p-6 rounded-xl border border-light-blue">
+                        <h3 class="text-xl font-bold text-gold-500 mb-4">Formação</h3>
+                        <div class="text-sm text-white space-y-2">
+                            <p>Economista, Mestre em Sustentabilidade, MBA Administração Estratégica, Especialização em Estatística, Palestrante, Professora e Consultora Empresarial.</p>
+                            <p class="font-semibold text-gold-500">Vencedora do Prêmio Minas de Economia pelo BDMG.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Bloco Expertise -->
+                    <div class="bg-dark-blue p-6 rounded-xl border border-light-blue">
+                        <h3 class="text-xl font-bold text-gold-500 mb-4">Expertise</h3>
+                        <div class="text-sm text-white space-y-2">
+                            <p>Consultora de Gestão Empresarial do SEBRAE, SENAI, CNI, FIEC e IEL.</p>
+                            <p>Professora de Administração Financeira para Executivos pelo IEL CE.</p>
+                            <p>Colunista de Economia do Jornal Diário do Nordeste, da TV e Rádio do Sistema Verdes Mares.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Bloco Clientes -->
+                    <div class="bg-dark-blue p-6 rounded-xl border border-light-blue">
+                        <h3 class="text-xl font-bold text-gold-500 mb-4">Clientes</h3>
+                        <div class="text-sm text-white space-y-2">
+                            <p>25 Indústria do Setor Cerâmica Vermelha;</p>
+                            <p>12 Indústrias do Setor de Rochas e Granitos;</p>
+                            <p>18 Empresas de Energia Solar</p>
+                            <p>05 Indústrias do Setor Metal Mecânica</p>
+                            <p>11 Indústrias do Setor de Madeira</p>
+                            <p>Setores Construção Civil, Panificação, Alimentação.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="jornada" class="py-20 bg-gray-900">
+        <section id="beneficios" class="py-20 bg-dark-blue">
+            <div class="container mx-auto px-4 sm:px-6 text-center">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white">O que você vai conquistar com esta jornada</h2>
+                <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
+                    <div class="bg-medium-blue p-6 sm:p-8 rounded-xl shadow-lg border border-transparent hover:border-light-blue"><div class="text-blue-500 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12a9 9 0 1118 0 9 9 0 01-18 0zM12 15.75c.373 0 .743-.09 1.08-.255l-1.08.255zm-1.08-.255A.75.75 0 0112 15.75v.008c.373 0 .743-.09 1.08-.255l-1.08.255zm1.08.255l1.08-.255a.75.75 0 00-1.08-.255z" /><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6A2.25 2.25 0 008.25 8.25v3.75a2.25 2.25 0 002.25 2.25h3a2.25 2.25 0 002.25-2.25V8.25a2.25 2.25 0 00-2.25-2.25h-3z" /></svg></div><h3 class="text-lg sm:text-xl font-bold text-white">Clareza Imediata</h3><p class="mt-2 text-sm sm:text-base text-white">Com o Flash Financeiro, tenha uma visão geral da saúde da sua empresa.</p></div>
+                    <div class="bg-medium-blue p-6 sm:p-8 rounded-xl shadow-lg border border-transparent hover:border-light-blue"><div class="text-green-500 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><h3 class="text-lg sm:text-xl font-bold text-white">Organização Rápida</h3><p class="mt-2 text-sm sm:text-base text-white">Sem precisar de planilhas complicadas para entender seus números.</p></div>
+                    <div class="bg-medium-blue p-6 sm:p-8 rounded-xl shadow-lg border border-transparent hover:border-light-blue"><div class="text-purple-500 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-3.75-2.25M21 12l-3.75 2.25" /></svg></div><h3 class="text-lg sm:text-xl font-bold text-white">Decisões Estratégicas</h3><p class="mt-2 text-sm sm:text-base text-white">Com o Raio-X, receba um plano de ação para decisões mais inteligentes.</p></div>
+                    <div class="bg-medium-blue p-6 sm:p-8 rounded-xl shadow-lg border border-transparent hover:border-light-blue"><div class="text-gold-500 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 15l.813.904m1.292 1.292L12 18l1.208-1.208M12 21a9 9 0 100-18 9 9 0 000 18z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15.904 9.813L15 9l.904.813m-1.292 1.292L18 12l-1.208 1.208M12 3a9 9 0 100 18 9 9 0 000 18z" /></svg></div><h3 class="text-lg sm:text-xl font-bold text-white">Diagnóstico Eficiente</h3><p class="mt-2 text-sm sm:text-base text-white">A tecnologia acelera a análise para focarmos 100% na estratégia.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="jornada" class="py-20 bg-medium-blue">
            <div class="container mx-auto px-4 sm:px-6">
                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center">Sua Jornada de Crescimento Acelerado</h2>
-               <p class="mt-4 text-base sm:text-lg text-gray-400 text-center max-w-3xl mx-auto">Entenda como vamos do diagnóstico imediato a um plano de ação completo para sua empresa.</p>
+               <p class="mt-4 text-base sm:text-lg text-white text-center max-w-3xl mx-auto">Entenda como vamos do diagnóstico imediato a um plano de ação completo para sua empresa.</p>
                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
                    <!-- Added bounce animation to journey cards -->
-                   <a href="#formulario" class="bg-gray-800 p-6 sm:p-8 rounded-2xl border border-gray-700 flex flex-col items-center text-center hover:bg-gray-700 transition-colors bounce-animation">
+                   <a href="#formulario" class="bg-dark-blue p-6 sm:p-8 rounded-2xl border border-light-blue flex flex-col items-center text-center hover:bg-light-blue transition-colors bounce-animation">
                        <div class="w-20 h-20 sm:w-24 sm:h-24 mb-6">
                            <img src="Gemini_Generated_Image_rgci0drgci0drgci.png" alt="Ícone Flash Financeiro" class="rounded-full w-full h-full object-cover border-2 border-gold-500">
                        </div>
                        <h3 class="text-xl sm:text-2xl font-bold text-gold-500">1. Flash Financeiro</h3>
                        <p class="text-base sm:text-lg font-semibold text-white mt-1">O Ponto de Partida Inteligente</p>
-                       <ul class="mt-6 space-y-4 text-sm sm:text-base text-gray-300 flex-grow text-left">
+                       <ul class="mt-6 space-y-4 text-sm sm:text-base text-white flex-grow text-left">
                            <li class="flex items-start"><span class="text-gold-500 mr-3 mt-1">✓</span><span><strong>Diagnóstico rápido e automatizado</strong> para entender sua situação atual.</span></li>
                            <li class="flex items-start"><span class="text-gold-500 mr-3 mt-1">✓</span><span>Visão instantânea dos seus <strong>principais indicadores financeiros</strong>.</span></li>
                            <li class="flex items-start"><span class="text-gold-500 mr-3 mt-1">✓</span><span>Receba por e-mail <strong>em poucos minutos</strong> após o cadastro.</span></li>
                        </ul>
-                       <div class="mt-8 bg-gray-900 p-4 rounded-lg text-center font-semibold text-white w-full">Primeiro passo: 100% Gratuito e Imediato</div>
+                       <div class="mt-8 bg-medium-blue p-4 rounded-lg text-center font-semibold text-white w-full">Primeiro passo: 100% Gratuito e Imediato</div>
                    </a>
                    <!-- Updated WhatsApp link with correct phone number -->
-                   <a href="https://wa.me/5585966666464?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20an%C3%A1lise%20estrat%C3%A9gica%20Raio-X%20Financeiro." target="_blank" class="bg-gray-800 p-6 sm:p-8 rounded-2xl border-2 border-gold-500 flex flex-col items-center text-center shadow-2xl shadow-gold-500/10 hover:bg-gray-700 transition-colors bounce-animation">
+                   <a href="https://wa.me/5585966666464?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20an%C3%A1lise%20estrat%C3%A9gica%20Raio-X%20Financeiro." target="_blank" class="bg-dark-blue p-6 sm:p-8 rounded-2xl border-2 border-gold-500 flex flex-col items-center text-center shadow-2xl shadow-gold-500/10 hover:bg-light-blue transition-colors bounce-animation">
                         <div class="w-20 h-20 sm:w-24 sm:h-24 mb-6">
                            <img src="https://placehold.co/150x150/1F2937/FFD700?text=Raio-X" alt="Ícone Raio-X Financeiro" class="rounded-full w-full h-full object-cover border-2 border-gold-500">
                        </div>
                        <h3 class="text-xl sm:text-2xl font-bold text-gold-500">2. Raio-X Financeiro</h3>
                        <p class="text-base sm:text-lg font-semibold text-white mt-1">A Análise Estratégica para o Lucro</p>
-                       <ul class="mt-6 space-y-4 text-sm sm:text-base text-gray-300 flex-grow text-left">
+                       <ul class="mt-6 space-y-4 text-sm sm:text-base text-white flex-grow text-left">
                            <li class="flex items-start"><span class="text-gold-500 mr-3 mt-1">✓</span><span><strong>Análise estratégica e gratuita</strong> feita diretamente pela Ana.</span></li>
                            <li class="flex items-start"><span class="text-gold-500 mr-3 mt-1">✓</span><span>Visão profunda para descobrir <strong>oportunidades de crescimento e lucro</strong>.</span></li>
                            <li class="flex items-start"><span class="text-gold-500 mr-3 mt-1">✓</span><span>Receba um <strong>plano de ação claro</strong> para aumentar a eficiência da sua empresa.</span></li>
@@ -193,49 +233,49 @@
            </div>
        </section>
 
-        <section id="como-funciona" class="py-20 bg-black">
+        <section id="como-funciona" class="py-20 bg-dark-blue">
             <div class="container mx-auto px-4 sm:px-6">
                 <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center">Seu caminho para o sucesso em 4 passos</h2>
                 <div class="mt-12 relative">
-                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-700" style="transform: translateY(-50%);"></div>
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-light-blue" style="transform: translateY(-50%);"></div>
                     <div class="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
-                        <div class="bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg z-10"><div class="flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16 mx-auto rounded-full bg-gold-500 text-black font-bold text-xl sm:text-2xl border-4 border-black">1</div><h3 class="mt-4 font-bold text-base sm:text-lg text-white">Preencha o formulário</h3><p class="mt-1 text-sm sm:text-base text-gray-400">Garanta seu acesso gratuito.</p></div>
-                        <div class="bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg z-10"><div class="flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16 mx-auto rounded-full bg-gold-500 text-black font-bold text-xl sm:text-2xl border-4 border-black">2</div><h3 class="mt-4 font-bold text-base sm:text-lg text-white">Receba seu Flash</h3><p class="mt-1 text-sm sm:text-base text-gray-400">Tenha o diagnóstico inicial em minutos.</p></div>
-                        <div class="bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg z-10"><div class="flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16 mx-auto rounded-full bg-gold-500 text-black font-bold text-xl sm:text-2xl border-4 border-black">3</div><h3 class="mt-4 font-bold text-base sm:text-lg text-white">Analise os resultados</h3><p class="mt-1 text-sm sm:text-base text-gray-400">Veja os pontos de melhoria da sua empresa.</p></div>
-                        <div class="bg-gray-900 p-4 sm:p-6 rounded-lg shadow-lg z-10"><div class="flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16 mx-auto rounded-full bg-gold-500 text-black font-bold text-xl sm:text-2xl border-4 border-black">4</div><h3 class="mt-4 font-bold text-base sm:text-lg text-white">Solicite seu Raio-X</h3><p class="mt-1 text-sm sm:text-base text-gray-400">Entre em contato para a análise estratégica.</p></div>
+                        <div class="bg-medium-blue p-4 sm:p-6 rounded-lg shadow-lg z-10"><div class="flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16 mx-auto rounded-full bg-gold-500 text-black font-bold text-xl sm:text-2xl border-4 border-dark-blue">1</div><h3 class="mt-4 font-bold text-base sm:text-lg text-white">Preencha o formulário</h3><p class="mt-1 text-sm sm:text-base text-white">Garanta seu acesso gratuito.</p></div>
+                        <div class="bg-medium-blue p-4 sm:p-6 rounded-lg shadow-lg z-10"><div class="flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16 mx-auto rounded-full bg-gold-500 text-black font-bold text-xl sm:text-2xl border-4 border-dark-blue">2</div><h3 class="mt-4 font-bold text-base sm:text-lg text-white">Receba seu Flash</h3><p class="mt-1 text-sm sm:text-base text-white">Tenha o diagnóstico inicial em minutos.</p></div>
+                        <div class="bg-medium-blue p-4 sm:p-6 rounded-lg shadow-lg z-10"><div class="flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16 mx-auto rounded-full bg-gold-500 text-black font-bold text-xl sm:text-2xl border-4 border-dark-blue">3</div><h3 class="mt-4 font-bold text-base sm:text-lg text-white">Analise os resultados</h3><p class="mt-1 text-sm sm:text-base text-white">Veja os pontos de melhoria da sua empresa.</p></div>
+                        <div class="bg-medium-blue p-4 sm:p-6 rounded-lg shadow-lg z-10"><div class="flex items-center justify-center h-12 w-12 sm:h-16 sm:w-16 mx-auto rounded-full bg-gold-500 text-black font-bold text-xl sm:text-2xl border-4 border-dark-blue">4</div><h3 class="mt-4 font-bold text-base sm:text-lg text-white">Solicite seu Raio-X</h3><p class="mt-1 text-sm sm:text-base text-white">Entre em contato para a análise estratégica.</p></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="formulario" class="py-20 bg-gray-900">
+        <section id="formulario" class="py-20 bg-medium-blue">
             <div class="container mx-auto px-4 sm:px-6">
-                <div class="max-w-xl mx-auto bg-black border-2 border-gold-500 rounded-2xl shadow-2xl shadow-gold-500/20 p-6 sm:p-8 md:p-12">
+                <div class="max-w-xl mx-auto bg-dark-blue border-2 border-gold-500 rounded-2xl shadow-2xl shadow-gold-500/20 p-6 sm:p-8 md:p-12">
                     <h2 class="text-2xl sm:text-3xl font-black text-center text-white">Comece agora com seu <span class="text-gold-500">Flash Financeiro</span> Gratuito</h2>
                     <!-- Added form masks and validation -->
                     <form id="flashForm" class="mt-8 space-y-6" onsubmit="return submitForm(event)">
                         <div>
-                            <label for="nome" class="block text-sm font-medium text-gray-300">Nome Completo *</label>
-                            <input type="text" name="nome" id="nome" required minlength="2" class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-gray-700" placeholder="Digite seu nome completo">
+                            <label for="nome" class="block text-sm font-medium text-white">Nome Completo *</label>
+                            <input type="text" name="nome" id="nome" required minlength="2" class="mt-1 block w-full px-4 py-3 bg-medium-blue border border-light-blue text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-light-blue" placeholder="Digite seu nome completo">
                         </div>
                         <div>
-                            <label for="whatsapp" class="block text-sm font-medium text-gray-300">WhatsApp *</label>
-                            <input type="tel" name="whatsapp" id="whatsapp" required class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-gray-700" placeholder="(85) 99999-9999" maxlength="15">
+                            <label for="whatsapp" class="block text-sm font-medium text-white">WhatsApp *</label>
+                            <input type="tel" name="whatsapp" id="whatsapp" required class="mt-1 block w-full px-4 py-3 bg-medium-blue border border-light-blue text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-light-blue" placeholder="(85) 99999-9999" maxlength="15">
                         </div>
                         <div>
-                            <label for="empresa" class="block text-sm font-medium text-gray-300">Nome da Empresa *</label>
-                            <input type="text" name="empresa" id="empresa" required minlength="2" class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-gray-700" placeholder="Digite o nome da sua empresa">
+                            <label for="empresa" class="block text-sm font-medium text-white">Nome da Empresa *</label>
+                            <input type="text" name="empresa" id="empresa" required minlength="2" class="mt-1 block w-full px-4 py-3 bg-medium-blue border border-light-blue text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-light-blue" placeholder="Digite o nome da sua empresa">
                         </div>
                         <div>
-                            <label for="cargo" class="block text-sm font-medium text-gray-300">Cargo *</label>
-                            <input type="text" name="cargo" id="cargo" required minlength="2" class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-gray-700" placeholder="Ex: CEO, Diretor, Gerente">
+                            <label for="cargo" class="block text-sm font-medium text-white">Cargo *</label>
+                            <input type="text" name="cargo" id="cargo" required minlength="2" class="mt-1 block w-full px-4 py-3 bg-medium-blue border border-light-blue text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-light-blue" placeholder="Ex: CEO, Diretor, Gerente">
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-300">E-mail Corporativo *</label>
-                            <input type="email" name="email" id="email" required class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-gray-700" placeholder="seu.email@empresa.com">
+                            <label for="email" class="block text-sm font-medium text-white">E-mail Corporativo *</label>
+                            <input type="email" name="email" id="email" required class="mt-1 block w-full px-4 py-3 bg-medium-blue border border-light-blue text-white rounded-md shadow-sm focus:ring-gold-500 focus:border-gold-500 focus:bg-light-blue" placeholder="seu.email@empresa.com">
                         </div>
                         <div>
-                            <button type="submit" id="submitBtn" class="w-full flex justify-center py-4 px-4 border border-transparent rounded-md shadow-lg text-base sm:text-lg font-bold text-black bg-gold-500 hover:bg-gold-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-gold-500 bounce-animation">
+                            <button type="submit" id="submitBtn" class="w-full flex justify-center py-4 px-4 border border-transparent rounded-md shadow-lg text-base sm:text-lg font-bold text-black bg-gold-500 hover:bg-gold-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-dark-blue focus:ring-gold-500 bounce-animation">
                                 <span id="btnText">QUERO MEU DIAGNÓSTICO FLASH</span>
                                 <span id="btnLoader" class="hidden">
                                     <svg class="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
@@ -252,21 +292,21 @@
             </div>
         </section>
 
-        <section id="depoimentos" class="py-20 bg-black">
+        <section id="depoimentos" class="py-20 bg-dark-blue">
             <div class="container mx-auto px-4 sm:px-6">
                 <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center">Líderes que já transformaram suas empresas</h2>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                    <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg"><p class="text-sm sm:text-base text-gray-300 italic">"O Flash Financeiro foi um divisor de águas. Em minutos, tive uma clareza que não consegui em anos. Depois, o Raio-X com a Ana foi simplesmente transformador. Essencial!"</p><div class="mt-6 flex items-center"><img src="https://placehold.co/100x100/333333/FFFFFF?text=J" alt="Foto do cliente" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full"><div class="ml-4"><p class="font-bold text-white text-sm sm:text-base">João Silva</p><p class="text-xs sm:text-sm text-gray-500">CEO, InovaTech</p></div></div></div>
-                    <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg"><p class="text-sm sm:text-base text-gray-300 italic">"A visão estratégica da Ana é poderosa. Os indicadores do Raio-X me ajudaram a tomar decisões que aumentaram nosso lucro de verdade."</p><div class="mt-6 flex items-center"><img src="https://placehold.co/100x100/333333/FFFFFF?text=M" alt="Foto do cliente" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full"><div class="ml-4"><p class="font-bold text-white text-sm sm:text-base">Maria Oliveira</p><p class="text-xs sm:text-sm text-gray-500">Diretora, Soluções Criativas</p></div></div></div>
-                    <div class="bg-gray-900 p-6 sm:p-8 rounded-xl shadow-lg"><p class="text-sm sm:text-base text-gray-300 italic">"Finalmente uma forma de organizar as finanças sem complicação. O diagnóstico Flash foi preciso e o Raio-X me deu o plano de ação que eu precisava."</p><div class="mt-6 flex items-center"><img src="https://placehold.co/100x100/333333/FFFFFF?text=C" alt="Foto do cliente" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full"><div class="ml-4"><p class="font-bold text-white text-sm sm:text-base">Carlos Pereira</p><p class="text-xs sm:text-sm text-gray-500">Fundador, Mercado Justo</p></div></div></div>
+                    <div class="bg-medium-blue p-6 sm:p-8 rounded-xl shadow-lg"><p class="text-sm sm:text-base text-white italic">"O Flash Financeiro foi um divisor de águas. Em minutos, tive uma clareza que não consegui em anos. Depois, o Raio-X com a Ana foi simplesmente transformador. Essencial!"</p><div class="mt-6 flex items-center"><img src="https://placehold.co/100x100/333333/FFFFFF?text=J" alt="Foto do cliente" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full"><div class="ml-4"><p class="font-bold text-white text-sm sm:text-base">João Silva</p><p class="text-xs sm:text-sm text-gray-300">CEO, InovaTech</p></div></div></div>
+                    <div class="bg-medium-blue p-6 sm:p-8 rounded-xl shadow-lg"><p class="text-sm sm:text-base text-white italic">"A visão estratégica da Ana é poderosa. Os indicadores do Raio-X me ajudaram a tomar decisões que aumentaram nosso lucro de verdade."</p><div class="mt-6 flex items-center"><img src="https://placehold.co/100x100/333333/FFFFFF?text=M" alt="Foto do cliente" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full"><div class="ml-4"><p class="font-bold text-white text-sm sm:text-base">Maria Oliveira</p><p class="text-xs sm:text-sm text-gray-300">Diretora, Soluções Criativas</p></div></div></div>
+                    <div class="bg-medium-blue p-6 sm:p-8 rounded-xl shadow-lg"><p class="text-sm sm:text-base text-white italic">"Finalmente uma forma de organizar as finanças sem complicação. O diagnóstico Flash foi preciso e o Raio-X me deu o plano de ação que eu precisava."</p><div class="mt-6 flex items-center"><img src="https://placehold.co/100x100/333333/FFFFFF?text=C" alt="Foto do cliente" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full"><div class="ml-4"><p class="font-bold text-white text-sm sm:text-base">Carlos Pereira</p><p class="text-xs sm:text-sm text-gray-300">Fundador, Mercado Justo</p></div></div></div>
                 </div>
             </div>
         </section>
 
-        <section id="chamada-final" class="py-20 bg-gray-900 text-white text-center">
+        <section id="chamada-final" class="py-20 bg-medium-blue text-white text-center">
             <div class="container mx-auto px-4 sm:px-6">
                 <h2 class="text-2xl sm:text-3xl md:text-4xl font-black">Agora é com você.</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-base sm:text-lg text-gray-300">Comece com seu diagnóstico Flash e abra a porta para uma análise estratégica completa com o Raio-X Financeiro. Sua empresa merece este nível de clareza.</p>
+                <p class="mt-4 max-w-2xl mx-auto text-base sm:text-lg text-white">Comece com seu diagnóstico Flash e abra a porta para uma análise estratégica completa com o Raio-X Financeiro. Sua empresa merece este nível de clareza.</p>
                 <!-- Added bounce animation to final CTA button -->
                 <a href="#formulario" class="mt-8 inline-block bg-gold-500 text-black font-bold py-4 px-6 sm:px-10 rounded-lg shadow-xl text-base sm:text-lg hover:bg-gold-600 bounce-animation">
                     QUERO COMEÇAR MINHA JORNADA AGORA
@@ -275,17 +315,17 @@
         </section>
     </main>
 
-    <footer class="bg-black text-gray-400">
+    <footer class="bg-dark-blue text-gray-300">
     <!-- Modal customizado WhatsApp -->
     <div id="whatsapp-modal" class="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-sm hidden">
-        <div class="bg-gray-900 border-4 border-gold-500 rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-fade-in">
-            <button id="close-modal-btn" class="absolute top-3 right-3 text-gray-400 hover:text-gold-500 text-2xl font-bold">&times;</button>
+        <div class="bg-medium-blue border-4 border-gold-500 rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-fade-in">
+            <button id="close-modal-btn" class="absolute top-3 right-3 text-gray-300 hover:text-gold-500 text-2xl font-bold">&times;</button>
             <div class="flex flex-col items-center text-center">
                 <img src="whatsapp_icon.png" alt="WhatsApp" class="w-16 h-16 mb-4">
                 <h3 class="text-xl font-bold text-gold-500 mb-2">Contato via WhatsApp</h3>
-                <p class="text-gray-200 mb-4">Você será direcionado para o WhatsApp da Ana Alves.<br>Deseja continuar?</p>
+                <p class="text-white mb-4">Você será direcionado para o WhatsApp da Ana Alves.<br>Deseja continuar?</p>
                 <a href="https://wa.me/5585966666464?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20an%C3%A1lise%20estrat%C3%A9gica%20Raio-X%20Financeiro." target="_blank" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-colors text-lg mb-2">Ir para o WhatsApp</a>
-                <button id="cancel-modal-btn" class="w-full mt-2 bg-gray-700 hover:bg-gray-800 text-gray-200 font-semibold py-2 px-6 rounded-lg transition-colors">Cancelar</button>
+                <button id="cancel-modal-btn" class="w-full mt-2 bg-light-blue hover:bg-medium-blue text-white font-semibold py-2 px-6 rounded-lg transition-colors">Cancelar</button>
             </div>
         </div>
     </div>
@@ -298,7 +338,7 @@
                 </div>
                 <div class="text-sm"><a href="#" class="hover:text-gold-500 transition-colors">Política de Privacidade</a> | <a href="#" class="hover:text-gold-500 transition-colors">Termos de Uso</a></div>
             </div>
-            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
+            <div class="mt-8 pt-8 border-t border-light-blue text-center text-sm">
                 <p>&copy; 2024 Ana Alves. Todos os direitos reservados.</p>
                 <p class="mt-2">Aviso: "O Flash Financeiro e o Raio-X Financeiro são ferramentas para fins de diagnóstico empresarial. Os resultados podem variar."</p>
             </div>
@@ -423,7 +463,7 @@
         function showSuccessMessage() {
             const successHtml = `
                 <div class="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-sm" id="success-modal">
-                    <div class="bg-gray-900 border-4 border-green-500 rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-fade-in">
+                    <div class="bg-medium-blue border-4 border-green-500 rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-fade-in">
                         <div class="flex flex-col items-center text-center">
                             <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-4">
                                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -431,13 +471,13 @@
                                 </svg>
                             </div>
                             <h3 class="text-xl font-bold text-green-500 mb-2">Sucesso!</h3>
-                            <p class="text-gray-200 mb-4">
+                            <p class="text-white mb-4">
                                 Seus dados foram enviados com sucesso para processamento!<br>
                                 Você receberá seu Flash Financeiro em breve no e-mail informado.<br>
                                 Você também pode acessar nosso assistente clicando no botão abaixo.
                             </p>
                             <div class="w-full space-y-2">
-                                <a href="https://chatgpt.com/g/g-689a434a755081918b14da890fd27450-flash-financeiro-v3" target="_blank" class="block w-full bg-black border-2 border-gold-500 hover:bg-gray-800 text-gold-500 font-bold py-3 px-6 rounded-lg shadow-lg transition-colors text-lg">ACESSAR O ASSISTENTE</a>
+                                <a href="https://chatgpt.com/g/g-689a434a755081918b14da890fd27450-flash-financeiro-v3" target="_blank" class="block w-full bg-dark-blue border-2 border-gold-500 hover:bg-light-blue text-gold-500 font-bold py-3 px-6 rounded-lg shadow-lg transition-colors text-lg">ACESSAR O ASSISTENTE</a>
                                 <button onclick="document.getElementById('success-modal').remove()" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-colors text-lg">OK</button>
                             </div>
                         </div>
@@ -451,7 +491,7 @@
         function showErrorMessage() {
             const errorHtml = `
                 <div class="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-sm">
-                    <div class="bg-gray-900 border-4 border-red-500 rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-fade-in">
+                    <div class="bg-medium-blue border-4 border-red-500 rounded-2xl shadow-2xl max-w-md w-full p-8 relative animate-fade-in">
                         <div class="flex flex-col items-center text-center">
                             <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mb-4">
                                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -459,7 +499,7 @@
                                 </svg>
                             </div>
                             <h3 class="text-xl font-bold text-red-500 mb-2">Erro no Envio</h3>
-                            <p class="text-gray-200 mb-4">Houve um problema ao enviar seus dados. Por favor, tente novamente ou entre em contato via WhatsApp.</p>
+                            <p class="text-white mb-4">Houve um problema ao enviar seus dados. Por favor, tente novamente ou entre em contato via WhatsApp.</p>
                             <button onclick="this.parentElement.parentElement.parentElement.remove()" class="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg transition-colors text-lg mb-2">Tentar Novamente</button>
                             <a href="https://wa.me/5585966666464?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20an%C3%A1lise%20estrat%C3%A9gica%20Flash%20Financeiro." target="_blank" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition-colors">Contato via WhatsApp</a>
                         </div>
@@ -529,7 +569,7 @@
                 e.target.style.backgroundColor = '#7f1d1d';
             } else {
                 e.target.style.borderColor = '#FFD700';
-                e.target.style.backgroundColor = '#374151';
+                e.target.style.backgroundColor = '#475569';
             }
         });
 
